@@ -1,0 +1,40 @@
+@import '../../../styles/mixins';
+
+.sectionWrapperAbout {
+  background-color: #{$kimaritecBlue};
+  color: white;
+  position: relative;
+
+  .logoFooter {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+
+    a, .map, .kimarite {
+      display: block;
+      background: no-repeat center center;
+      background-size: contain;
+      width: 120px;
+      height: 120px;
+      border-radius: 5px;
+    }
+
+    #qutLink {
+      background-image: url('../../../images/qutLogo.svg');
+    }
+
+    .map {
+      background-image: url('../../../images/map.png');
+    }
+
+    .kimarite {
+      background-color: #fff;
+      background-image: url('../../../images/kimarite.png');
+    }
+  }
+
+
+}

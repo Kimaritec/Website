@@ -1,0 +1,30 @@
+@import '../../../styles/mixins';
+
+.pageNavigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  row-gap: 10px;
+  position: fixed;
+  top: 75px;
+  left: 0;
+
+  background: #fff;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 0 0 10px 0;
+
+  a {
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+    display: block;
+    padding: 0 10px;
+    border-left: 2px solid #{$kimaritecGreen};
+
+    &:hover {
+      background: #e3e3e3;
+    }
+  }
+}

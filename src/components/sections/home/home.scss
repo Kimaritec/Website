@@ -1,0 +1,56 @@
+#home {
+  .sectionContent {
+    align-items: center;
+  }
+  .homeSection {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 40px;
+    row-gap: 40px;
+
+    @media all and (max-width: 880px) {
+      justify-content: center;
+    }
+
+    .graphic {
+      border-radius: 100%;
+      width: 350px;
+      height: 350px;
+      background: url('../../../images/proteinGraphic.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 15px 0 #ccc;
+    }
+
+    .homeContent {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h2 {
+      &.kimaritecLogo {
+        width: 350px;
+        height: 200px;
+        background: url('../../../images/KimaritecLogo.svg') no-repeat center center;
+        background-size: contain;
+      }
+      margin: 0;
+    }
+
+    p {
+      font-size: 40px;
+      margin: 20px 0 0;
+      font-family: "Great Vibes", cursive;
+      text-align: center;
+    }
+  }
+}

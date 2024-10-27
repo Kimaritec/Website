@@ -1,0 +1,22 @@
+@import '../styles/mixins';
+
+.solution {
+  #ourSolution {
+    background: #{$kimaritecGreen};
+    .branded {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  #platform {
+    background: #{$kimaritecBlue};
+    color: #fff;
+    .branded {
+      font-size: 20px;
+      font-weight: bold;
+      color: #{$kimaritecGreen};
+    }
+  }
+}
+

@@ -1,0 +1,112 @@
+@import '../../../../styles/mixins';
+
+$bulletLabelSize: 120px;
+
+.platformDiagram {
+  position: relative;
+  margin: 40px auto;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    height: 450px;
+    left: -90px;
+    top: 50%;
+    margin-top: -225px;
+    border-radius: 0 100% 100% 0;
+    border: 2px solid transparent;
+    border-right: 2px solid #{$kimaritecGreen};
+  }
+
+  ol, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    height: $bulletLabelSize;
+
+    .label {
+      min-width: $bulletLabelSize;
+      min-height: $bulletLabelSize;
+      width: $bulletLabelSize;
+      height: $bulletLabelSize;
+      border-radius: 100%;
+      position: relative;
+      z-index: 2;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .value {
+      strong {
+        display: block;
+      }
+    }
+
+    &:nth-child(1) {
+      .label {
+        color: #000;
+        background: #{$kimaritecGreen};
+      }
+    }
+
+    &:nth-child(2) {
+      .label {
+        color: #000;
+        background: #ffdd33;
+      }
+    }
+
+    &:nth-child(3) {
+      .label {
+        color: #000;
+        background: #ff99ee;
+      }
+    }
+
+
+    &:nth-child(4) {
+      .label {
+        color: #000;
+        background: #6699ff;
+      }
+    }
+
+    &:nth-child(2), &:nth-child(3) {
+      .label {
+        margin-left: 50px;
+      }
+    }
+  }
+
+
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.75em;
+
+    li {
+      .label {
+        min-width: $bulletLabelSize * 0.75;
+        min-height: $bulletLabelSize * 0.75;
+        width: $bulletLabelSize * 0.75;
+        height: $bulletLabelSize * 0.75;
+      }
+    }
+  }
+}
