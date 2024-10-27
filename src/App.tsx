@@ -11,7 +11,7 @@ import {PeopleView} from "./views/PeopleView";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Website">
       <Routes>
         <Route path="/" Component={ HomeView } />
         <Route path="/solution" Component={ SolutionView } />
